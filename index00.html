@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | STD NTS</title>
+    <link rel="stylesheet" href="index00.css">
+    <script src="index00.js" defer></script>
+</head>
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2 class="logo">STD<span>NTS.</span></h2>
+
+        <p class="nav-title">MAIN</p>
+
+        <nav>
+            <a href="#dashboard" class="nav-link active">▦ Dashboard</a>
+            <a href="#schedule" class="nav-link">▦ Schedule</a>
+            <a href="#tasks" class="nav-link">
+                ☷ Assignments <span class="badge">3</span>
+            </a>
+            <a href="#courses" class="nav-link">▤ Courses</a>
+        </nav>
+
+        <p class="nav-title workspace">WORKSPACE</p>
+
+        <nav>
+            <a href="#materials" class="nav-link">▧ Notes &amp; Docs</a>
+            <a href="#materials" class="nav-link">♧ Resources</a>
+        </nav>
+
+        <div class="profile">
+            <div class="avatar">ST</div>
+            <div>
+                <strong>Student Profile</strong>
+                <p>Computer Science</p>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="dashboard">
+
+        <header class="topbar">
+
+            <div>
+                <p class="date" id="currentDate"></p>
+                <h1 id="greeting">Good evening, Student</h1>
+            </div>
+
+            <div class="top-actions">
+                <button class="search-button" id="assistantButton">
+                    ⌕ Ask your study assistant
+                </button>
+
+                <button class="notification" id="notificationButton"
+                        aria-label="Notifications">♧</button>
+            </div>
+
+        </header>
+
+
+        <div class="dashboard-grid">
+
+            <!-- CENTER COLUMN -->
+            <section class="center-column">
+
+                <!-- STATISTICS -->
+                <div class="stats-grid">
+
+                    <article class="stat-card">
+                        <div class="stat-heading">
+                            <span>Current GPA</span>
+                            <span>▥</span>
+                        </div>
+                        <h2>3.84</h2>
+                        <p class="positive">↑ Top 5%</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-heading">
+                            <span>Study Streak</span>
+                            <span>♧</span>
+                        </div>
+                        <h2>14 <small>days</small></h2>
+                        <div class="progress-track">
+                            <div class="progress streak-progress"></div>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-heading">
+                            <span>Assignments</span>
+                            <span>▤</span>
+                        </div>
+                        <h2>12 <small>left</small></h2>
+                        <p class="small-note">3 due this week</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-heading">
+                            <span>Credits Earned</span>
+                            <span>◎</span>
+                        </div>
+                        <h2>86 <small>/ 120</small></h2>
+                        <div class="progress-track">
+                            <div class="progress credits-progress"></div>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                <!-- PRIORITY TASKS -->
+                <section class="section-block" id="tasks">
+
+                    <div class="section-heading">
+                        <h2>Priority Tasks</h2>
+                        <button class="text-button" id="viewAllButton">
+                            View all →
+                        </button>
+                    </div>
+
+                    <div class="task-list">
+
+                        <article class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+
+                            <div class="task-content">
+                                <h3>Advanced Calculus: Problem Set 4</h3>
+                                <p>Complete integration sections 3.1 to 3.4</p>
+
+                                <div class="task-meta">
+                                    <span>◉ MATH 301</span>
+                                    <span>◷ Feb 28</span>
+                                </div>
+                            </div>
+
+                            <span class="due-tag urgent">Due Today</span>
+                        </article>
+
+
+                        <article class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+
+                            <div class="task-content">
+                                <h3>Machine Learning: Final Project Proposal</h3>
+                                <p>Submit 2-page draft on predictive models</p>
+
+                                <div class="task-meta">
+                                    <span>◉ CS 450</span>
+                                    <span>♧ Group Task</span>
+                                </div>
+                            </div>
+
+                            <span class="due-tag tomorrow">Tomorrow</span>
+                        </article>
+
+
+                        <article class="task-item completed">
+                            <input type="checkbox" class="task-checkbox" checked>
+
+                            <div class="task-content">
+                                <h3>Physics Lab Report</h3>
+                                <p>Experiment 5: Results analysis</p>
+
+                                <div class="task-meta">
+                                    <span>◉ PHYS 201</span>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+
+                <!-- RECENT MATERIALS -->
+                <section class="section-block" id="materials">
+
+                    <div class="section-heading">
+                        <h2>Recent Materials</h2>
+                    </div>
+
+                    <div class="materials-grid">
+
+                        <article class="material-card">
+                            <div class="file-icon pdf">▧</div>
+                            <h3>ML_Notes_Ch3.pdf</h3>
+                            <p>Edited 2h ago</p>
+                        </article>
+
+                        <article class="material-card">
+                            <div class="file-icon slides">▤</div>
+                            <h3>Group_Project_Deck</h3>
+                            <p>Edited 5h ago</p>
+                        </article>
+
+                        <article class="material-card">
+                            <div class="file-icon doc">▧</div>
+                            <h3>Calculus_Lecture_09</h3>
+                            <p>Watched yesterday</p>
+                        </article>
+
+                    </div>
+                </section>
+
+            </section>
+
+
+            <!-- RIGHT COLUMN -->
+            <aside class="right-column">
+
+                <!-- FOCUS TIMER -->
+                <section class="focus-card">
+
+                    <div class="focus-heading">
+                        <span>Focus Session</span>
+                        <button id="timerSettings" aria-label="Timer settings">•••</button>
+                    </div>
+
+                    <div class="timer" id="timer">25:00</div>
+
+                    <p class="focus-subtitle">
+                        Deep Work • Block Distractions
+                    </p>
+
+                    <div class="timer-controls">
+                        <button class="round-button" id="resetTimer"
+                                aria-label="Reset timer">↻</button>
+
+                        <button class="start-button" id="startTimer">
+                            Start Focus
+                        </button>
+
+                        <button class="round-button" id="restartTimer"
+                                aria-label="Restart timer">▷</button>
+                    </div>
+
+                </section>
+
+
+                <!-- TODAY'S SCHEDULE -->
+                <section class="schedule-card" id="schedule">
+
+                    <div class="schedule-heading">
+                        <h2>Today's<br>Schedule</h2>
+
+                        <label class="sync-control">
+                            <span>Auto-sync</span>
+                            <input type="checkbox" id="syncToggle" checked>
+                            <span class="switch"></span>
+                        </label>
+                    </div>
+
+                    <div class="timeline">
+
+                        <article class="timeline-item">
+                            <p class="timeline-time">09:00 AM - 10:30 AM</p>
+
+                            <div class="event-card">
+                                <h3>Advanced Calculus</h3>
+                                <p>◉ Room 302, Sci Building</p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item current">
+                            <p class="timeline-time">
+                                11:00 AM - 12:30 PM
+                                <span>• Starting soon</span>
+                            </p>
+
+                            <div class="event-card highlighted">
+                                <h3>Machine Learning</h3>
+                                <p>◉ Lecture Hall A</p>
+
+                                <div class="event-meta">
+                                    <span>◷ 1h 30m</span>
+                                    <span>Study group discussion</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <p class="timeline-time">02:00 PM - 04:00 PM</p>
+
+                            <div class="event-card">
+                                <h3>Physics Laboratory</h3>
+                                <p>◉ Lab 4B</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+            </aside>
+
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
